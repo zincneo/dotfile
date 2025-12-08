@@ -1,0 +1,19 @@
+[build]
+rustc-wrapper = "sccache" # 使用 sccache 来缓存 rustc 编译结果
+incremental = true
+
+[target.x86_64-unknown-linux-gnu]
+linker = "gcc"
+rustflags = ["-C", "link-arg=-fuse-ld=mold"] # 使用最快的链接器 mold
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+strip = true
+
+
+[profile.dev]
+opt-level = 1
+debug = 2
+codegen-units = 16
