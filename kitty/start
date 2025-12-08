@@ -1,7 +1,0 @@
-NU_PATH=$(which nu)
-
-if [ -x "$NU_PATH" ]; then
-	$NU_PATH
-else
-	$SHELL
-fi
