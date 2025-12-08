@@ -28,7 +28,7 @@ keybinds clear-defaults=true {
         bind "H" { GoToPreviousTab; }
         bind "L" { GoToNextTab; }
         // Edit the scrollback of currently focused pane with the user's default editor
-        bind "e" { EditScrollback; }
+        bind "e" { SwitchToMode "locked"; EditScrollback; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "normal"; }
