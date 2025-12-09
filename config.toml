@@ -6,6 +6,10 @@ incremental = true
 linker = "gcc"
 rustflags = ["-C", "link-arg=-fuse-ld=mold"] # 使用最快的链接器 mold
 
+[target.wasm32-unknown-unknown]
+linker = "gcc"
+rustflags = ["-C", "link-arg=-fuse-ld=mold"]
+
 [profile.release]
 lto = "thin"
 codegen-units = 1
