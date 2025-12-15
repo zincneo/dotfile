@@ -1,0 +1,79 @@
+spawn-sh-at-startup "~/.config/scripts/sunshine.sh"
+spawn-at-startup "fcitx5"
+
+environment {
+    QT_IM_MODULE "fcitx"
+    QT_IM_MODULES "wayland;fcitx;ibus" //  >= Qt6.7 needed
+    XMODIFIERS "@im=fcitx"
+    SDL_IM_MODULE "fcitx"
+    GLFW_IM_MODULE "ibus"
+
+    QT_QPA_PLATFORMTHEME "qt6ct"
+
+    DISPLAY ":0"
+}
+
+include "outputs.kdl"
+include "binds.kdl"
+include "windows.kdl"
+
+input {
+    keyboard {
+        xkb {
+        }
+
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+    }
+
+    trackpoint {
+    }
+
+}
+
+layout {
+    gaps 10
+    center-focused-column "never"
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+
+    }
+    default-column-width { proportion 0.5; }
+    focus-ring {
+        width 3
+        active-color "#b7bdf8"
+        inactive-color "#505050"
+    }
+    border {
+        off
+        width 4
+        active-color "#ffc87f"
+        inactive-color "#505050"
+        urgent-color "#9b0000"
+    }
+    shadow {
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+    struts {
+    }
+}
+
+hotkey-overlay {
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+}

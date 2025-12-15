@@ -1,0 +1,7 @@
+output "eDP-1" {
+    mode custom=true "2880x1620@90.030"
+    scale 1.5
+    transform "normal"
+    position x=0 y=0
+    backdrop-color "#111111"
+}
