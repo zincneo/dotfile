@@ -1,6 +1,6 @@
 spawn-sh-at-startup "~/.config/scripts/sunshine.sh"
 spawn-at-startup "fcitx5"
-spawn-sh-at-startup "swaybg -i ~/.wallpaper/sakura.jpg -m fill"
+// spawn-sh-at-startup "swaybg -i ~/.wallpaper/sakura.jpg -m fill"
 
 environment {
     QT_IM_MODULE "fcitx"
@@ -24,8 +24,8 @@ include "windows.kdl"
 input {
     keyboard {
         xkb {
+            options "ctrl:swapcaps"
         }
-
         numlock
     }
 
