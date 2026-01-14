@@ -17,7 +17,7 @@ impl Render for RootView {
     }
 }
 
-fn on_finish_launching(app: &mut AsyncApp) {
+fn on_finish_launching(app: &mut App) {
     app.open_window(WindowOptions::default(), build_root_view);
 }
 
@@ -27,3 +27,27 @@ fn build_root_view(window: &mut Window, app: &mut App) -> Entity<RootView> {
 }
 """
 description = "gpui RootView"
+
+[[snippets]]
+prefix = "gcustom"
+scope = [ "rust" ]
+body = """
+pub fn ${1}(w: f32, h: f32) -> impl IntoElement {
+    canvas(
+        |_, _, _| {},
+        move |bounds, (), window, _| {
+            let Bounds { origin, size } = bounds;
+            let mut lines = vec![];
+            let mut builder = PathBuilder::fill();
+            let path = builder.build().unwrap();
+            lines.push((path, rgba(c)));
+            for (path, color) in lines {
+                window.paint_path(path, color);
+            }
+        },
+    )
+    .w(px(w))
+    .h(px(h))
+}
+"""
+description = "gpui CustomElement"
