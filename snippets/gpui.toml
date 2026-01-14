@@ -1,0 +1,29 @@
+[[snippets]]
+prefix = "groot"
+scope = [ "rust" ]
+body = """
+struct RootView;
+
+impl Default for RootView {
+    fn default() -> Self {
+        RootView
+    }
+}
+
+#[allow(unused)]
+impl Render for RootView {
+    fn render(&mut self, window: &mut Window, cx: &mut Context<Self>) -> impl IntoElement {
+        div()
+    }
+}
+
+fn on_finish_launching(app: &mut AsyncApp) {
+    app.open_window(WindowOptions::default(), build_root_view);
+}
+
+#[allow(unused)]
+fn build_root_view(window: &mut Window, app: &mut App) -> Entity<RootView> {
+    app.new(|cx| RootView::default())
+}
+"""
+description = "gpui RootView"
