@@ -2,6 +2,10 @@ spawn-sh-at-startup "~/.config/scripts/sunshine.sh"
 spawn-at-startup "fcitx5"
 // spawn-sh-at-startup "swaybg -i ~/.wallpaper/sakura.jpg -m fill"
 
+overview {
+    backdrop-color "#24273a"
+}
+
 environment {
     QT_IM_MODULE "fcitx"
     QT_IM_MODULES "wayland;fcitx;ibus" //  >= Qt6.7 needed
@@ -11,6 +15,7 @@ environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
     NIXOS_OZONE_WL "1"
     DISPLAY ":0"
+    WAYLAND_DISPLAY "wayland-1"
 
     GTK_THEME "Catppuccin-GTK-Purple-Dark-Compact-Macchiato"
     GTK_ICON_THEME "Papirus-Dark"
@@ -24,7 +29,7 @@ include "windows.kdl"
 input {
     keyboard {
         xkb {
-            options "ctrl:swapcaps"
+            // options "ctrl:swapcaps"
         }
         numlock
     }
@@ -43,8 +48,9 @@ input {
 }
 
 layout {
-    gaps 10
-    center-focused-column "never"
+    gaps 8
+    background-color "#24273a"
+    center-focused-column "always"
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
@@ -53,16 +59,13 @@ layout {
     }
     default-column-width { proportion 0.5; }
     focus-ring {
-        width 3
-        active-color "#b7bdf8"
-        inactive-color "#505050"
+        off
     }
     border {
         off
-        width 4
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
+        width 3
+        active-gradient from="#24273a1f" to="#1e203000" angle=90
+        inactive-color "#00000000"
     }
     shadow {
         softness 30
@@ -71,7 +74,12 @@ layout {
         color "#0007"
     }
     struts {
+        left 0
+        right 0
+        top 28
+        bottom 28
     }
+    // background-color "#24273a"
 }
 
 hotkey-overlay {

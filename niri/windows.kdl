@@ -1,7 +1,7 @@
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 0
     clip-to-geometry true
-    default-column-width { proportion 0.7; }
+    default-column-width { proportion 0.6; }
 }
 
 window-rule {
