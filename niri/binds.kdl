@@ -65,6 +65,8 @@ binds {
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
 
+    Print        { screenshot; } 
+
 	// application
     Super+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Super+B hotkey-overlay-title="Open a Google-chrome" { spawn "google-chrome-stable" "--enable-features=UseOzonePlatform" "--ozone-platform=wayland"; }

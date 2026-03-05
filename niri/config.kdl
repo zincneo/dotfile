@@ -17,7 +17,7 @@ environment {
     DISPLAY ":0"
     WAYLAND_DISPLAY "wayland-1"
 
-    GTK_THEME "Catppuccin-GTK-Purple-Dark-Compact-Macchiato"
+    GTK_THEME "Catppuccin-GTK-Lavender-Dark-Macchiato"
     GTK_ICON_THEME "Papirus-Dark"
     GTK_USE_PORTAL "1"
 }
