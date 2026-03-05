@@ -1,0 +1,131 @@
+@import "macchiato.css";
+
+* {
+    font-family: "Iosevka Nerd Font", "Noto Sans CJK SC", sans-serif;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @text;
+}
+
+window#waybar > box {
+    background-color: @crust;
+    border-radius: 12px;
+    margin: 4px 8px 0 8px;
+}
+
+tooltip {
+    background: @surface0;
+    border: 1px solid @surface1;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: @text;
+}
+
+/* ---- Left modules ---- */
+
+#workspaces {
+    margin: 4px 8px;
+}
+
+#workspaces button {
+    padding: 0 4px;
+    margin: 0 3px;
+    color: @overlay0;
+    border: none;
+    border-radius: 12px;
+    background: @surface0;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: @crust;
+    background: @red;
+}
+
+#workspaces button:hover {
+    color: @text;
+    background: alpha(@surface1, 0.6);
+}
+
+/* ---- Center modules ---- */
+
+#clock {
+    font-weight: bold;
+    color: @lavender;
+}
+
+/* ---- Right modules ---- */
+
+#clock,
+#clock.date,
+#backlight,
+#network,
+#pulseaudio,
+#custom-battery,
+#tray {
+    padding: 0 10px;
+}
+
+#clock.date {
+    color: @peach;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#pulseaudio {
+    color: @mauve;
+}
+
+#pulseaudio.muted {
+    color: @overlay0;
+}
+
+#network {
+    color: @sky;
+}
+
+#network.disconnected {
+    color: @overlay0;
+}
+
+#custom-battery {
+    color: @green;
+}
+
+#custom-battery.charging {
+    color: @green;
+}
+
+#custom-battery.warning {
+    color: @yellow;
+}
+
+#custom-battery.critical {
+    color: @red;
+}
+
+#custom-battery.none {
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+#tray {
+    color: @text;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
