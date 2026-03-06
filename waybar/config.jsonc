@@ -32,7 +32,7 @@
 
     "clock": {
         "format": "{:%H:%M}",
-        "tooltip-format": "<big>{:%Y年 %m月 %d日}</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip": false
     },
 
     "clock#date": {

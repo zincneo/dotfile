@@ -6,21 +6,30 @@
     min-height: 0;
 }
 
+/* ---- Neumorphism 背景容器 ---- */
 window#waybar {
     background-color: transparent;
     color: @text;
 }
 
 window#waybar > box {
-    background-color: @crust;
-    border-radius: 12px;
-    margin: 4px 8px 0 8px;
+    background-color: @mantle;
+    border-radius: 16px;
+    margin: 8px 12px;
+    padding: 6px 10px;
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.12),
+        10px 10px 25px rgba(0, 0, 0, 0.7);
 }
 
 tooltip {
-    background: @surface0;
-    border: 1px solid @surface1;
+    background: @mantle;
+    border: none;
     border-radius: 12px;
+    box-shadow:
+        -8px -8px 16px rgba(255, 255, 255, 0.12),
+        8px 8px 20px rgba(0, 0, 0, 0.7);
+    padding: 10px 14px;
 }
 
 tooltip label {
@@ -34,23 +43,31 @@ tooltip label {
 }
 
 #workspaces button {
-    padding: 0 4px;
-    margin: 0 3px;
+    padding: 0 8px;
+    margin: 0 4px;
     color: @overlay0;
     border: none;
-    border-radius: 12px;
-    background: @surface0;
-    transition: all 0.2s ease;
+    border-radius: 10px;
+    background: @mantle;
+    transition: all 0.3s ease;
+    box-shadow:
+        -4px -4px 8px rgba(255, 255, 255, 0.1),
+        4px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 #workspaces button.active {
-    color: @crust;
-    background: @red;
+    color: @red;
+    background: @mantle;
+    box-shadow:
+        inset -3px -3px 6px rgba(255, 255, 255, 0.08),
+        inset 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
 
 #workspaces button:hover {
     color: @text;
-    background: alpha(@surface1, 0.6);
+    box-shadow:
+        -3px -3px 6px rgba(255, 255, 255, 0.12),
+        3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* ---- Center modules ---- */
@@ -58,18 +75,30 @@ tooltip label {
 #clock {
     font-weight: bold;
     color: @lavender;
+    padding: 0 12px;
+    margin: 0 6px;
+    border-radius: 10px;
+    background: @mantle;
+    box-shadow:
+        -4px -4px 8px rgba(255, 255, 255, 0.1),
+        4px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* ---- Right modules ---- */
 
-#clock,
 #clock.date,
 #backlight,
 #network,
 #pulseaudio,
 #custom-battery,
 #tray {
-    padding: 0 10px;
+    padding: 0 12px;
+    margin: 0 4px;
+    border-radius: 10px;
+    background: @mantle;
+    box-shadow:
+        -4px -4px 8px rgba(255, 255, 255, 0.1),
+        4px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 #clock.date {
@@ -116,6 +145,7 @@ tooltip label {
     padding: 0;
     margin: 0;
     min-width: 0;
+    box-shadow: none;
 }
 
 #tray {
