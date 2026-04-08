@@ -1,5 +1,6 @@
-spawn-sh-at-startup "~/.config/scripts/sunshine.sh"
 spawn-at-startup "fcitx5"
+spawn-at-startup "xwayland-satellite"
+spawn-sh-at-startup "~/.config/scripts/sunshine.sh"
 spawn-sh-at-startup "swaybg -i ~/.wallpaper/sakura.jpg -m fill"
 spawn-sh-at-startup "waybar"
 
