@@ -12,6 +12,7 @@ window-rule {
 
 window-rule {
     match app-id="lzc-client-desktop"
+    match app-id="Aseprite"
     open-fullscreen true
 }
 
