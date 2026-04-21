@@ -4,7 +4,7 @@ incremental = true
 
 [target.x86_64-unknown-linux-gnu]
 linker = "gcc"
-rustflags = ["-C", "link-arg=-fuse-ld=mold"] # 使用最快的链接器 mold
+rustflags = ["-C", "link-arg=-fuse-ld=mold"]
 
 [target.wasm32-unknown-unknown]
 
@@ -14,8 +14,14 @@ codegen-units = 1
 panic = "abort"
 strip = true
 
-
 [profile.dev]
 opt-level = 1
 debug = 2
 codegen-units = 16
+codegen-backend = "cranelift"
+
+[unstable]
+codegen-backend = true
+
+[profile.dev.package."*"]
+codegen-backend = "llvm"
