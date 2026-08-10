@@ -7,21 +7,3 @@ linker = "gcc"
 rustflags = ["-C", "link-arg=-fuse-ld=mold"]
 
 [target.wasm32-unknown-unknown]
-
-[profile.release]
-lto = "thin"
-codegen-units = 1
-panic = "abort"
-strip = true
-
-[profile.dev]
-opt-level = 1
-debug = 2
-codegen-units = 16
-codegen-backend = "cranelift"
-
-[unstable]
-codegen-backend = true
-
-[profile.dev.package."*"]
-codegen-backend = "llvm"
