@@ -103,8 +103,13 @@ plugins {
     }
 }
 
-load_plugins {
-}
+// load_plugins {
+//     "file:/home/zinc/dotfile/zellij/plugins/zjframes.wasm" {
+//         hide_frame_for_single_pane       "true"
+//         hide_frame_except_for_search     "true"
+//         hide_frame_except_for_fullscreen "true"
+//     }
+// }
 
 web_client {
     font "monospace"
@@ -112,11 +117,16 @@ web_client {
 
 simplified_ui true
 
+pane_frame_style "none"
+
+pane_frames false
+
 theme "catppuccin-macchiato"
 
 default_mode "locked"
 
-default_layout "custom_layout"
+// default_layout "custom_layout"
+default_layout "zjstatus_layout"
 
 mouse_mode false
 
