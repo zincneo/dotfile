@@ -1,8 +1,6 @@
 spawn-at-startup "fcitx5"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "systemctl" "--user" "start" "sunshine.service"
-spawn-sh-at-startup "swaybg -i ~/.wallpaper/sakura.jpg -m fill"
-spawn-sh-at-startup "gbar"
 
 overview {
     backdrop-color "#24273a"
@@ -51,7 +49,7 @@ input {
 }
 
 layout {
-    gaps 8
+    gaps 12
     background-color "#24273a"
     center-focused-column "never"
     preset-column-widths {
@@ -63,7 +61,7 @@ layout {
     default-column-width { proportion 0.5; }
     focus-ring {
         on
-        width 3
+        width 6
         active-gradient from="#ed8796" to="#b7bdf8" angle=90 in="oklch longer hue"
         inactive-color "#45475a"
     }
@@ -80,12 +78,11 @@ layout {
         color "#0007"
     }
     struts {
-        left 48
+        left 60
         right 0
-        top 8
-        bottom 8
+        top 12
+        bottom 12
     }
-    // background-color "#24273a"
 }
 
 hotkey-overlay {
