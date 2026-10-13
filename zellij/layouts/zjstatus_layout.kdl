@@ -17,7 +17,7 @@ layout {
                 color_lavender "#B7BDF8"
                 color_pink    "#F5BDE6"
 
-                format_left   "#[fg=$blue,bg=$bg,bold] {mode} #[fg=$fg,bg=$bg][{session}]"
+                format_left   "#[fg=$blue,bg=$bg,bold] {mode}#[fg=$fg,bg=$bg] [{session}]"
                 format_center "#[fg=$fg,bg=$bg]{tabs}"
                 format_right  "#[fg=$green,bg=$bg]{command_git_branch}"
                 format_space  "#[bg=$bg]"
