@@ -31,13 +31,12 @@ TogglePreedit=
 ModifierOnlyKeyTimeout=249
 
 [Hotkey/TriggerKeys]
-0=Control+space
 
 [Behavior]
 # Active By Default
 ActiveByDefault=False
 # Reset state on Focus In
-resetStateWhenFocusIn=All
+resetStateWhenFocusIn=No
 # Share Input State
 ShareInputState=All
 # Show preedit in application

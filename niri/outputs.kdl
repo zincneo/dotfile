@@ -1,7 +1,7 @@
 output "eDP-1" {
     // mode custom=true "3072x1920@120.000" // 16 : 10
     mode custom=true "3072x1728@60.000" // 16 : 9
-    scale 1.5
+    scale 2.0
     transform "normal"
     position x=0 y=0
 }

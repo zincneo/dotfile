@@ -46,15 +46,7 @@ binds {
     Mod+Shift+Page_Up   { move-workspace-up; }
     Mod+Shift+U         { move-workspace-down; }
     Mod+Shift+I         { move-workspace-up; }
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
-    Mod+5 { focus-workspace 5; }
-    Mod+6 { focus-workspace 6; }
-    Mod+7 { focus-workspace 7; }
-    Mod+8 { focus-workspace 8; }
-    Mod+9 { focus-workspace 9; }
+    Mod+1 hotkey-overlay-title="Toggle control panel" { spawn "qs" "ipc" "call" "controlPanel" "toggle"; }
     Mod+Ctrl+1 { move-column-to-workspace 1; }
     Mod+Ctrl+2 { move-column-to-workspace 2; }
     Mod+Ctrl+3 { move-column-to-workspace 3; }
@@ -66,10 +58,10 @@ binds {
     Mod+Ctrl+9 { move-column-to-workspace 9; }
 
     Print        { screenshot; } 
-    Super+Shift+F { screenshot-window write-to-disk=false; }
+    Ctrl+Print { screenshot-screen; }
 
 	// application
     Super+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Super+B hotkey-overlay-title="Open a Google-chrome" { spawn "google-chrome-stable" "--enable-features=UseOzonePlatform" "--ozone-platform=wayland"; }
-    Super+Return hotkey-overlay-title="Open an Application launcher: rofi" { spawn "rofi" "-show" "drun"; }
+    Super+Return hotkey-overlay-title="Open an Application launcher" { spawn "qs" "ipc" "call" "launcher" "toggle"; }
 }

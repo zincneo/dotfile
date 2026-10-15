@@ -63,7 +63,7 @@ layout {
         on
         width 6
         active-gradient from="#ed8796" to="#b7bdf8" angle=90 in="oklch longer hue"
-        inactive-color "#45475a"
+        inactive-gradient from="#ed8796" to="#b7bdf8" angle=90 in="oklch longer hue"
     }
     border {
         off
