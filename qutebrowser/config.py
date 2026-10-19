@@ -91,6 +91,13 @@ config.bind('<Down>', 'completion-item-focus --history next', mode='command')
 # Ctrl-j/k 上下移动
 config.bind('<Ctrl-j>', 'completion-item-focus --history next', mode='command')
 config.bind('<Ctrl-k>', 'completion-item-focus --history prev', mode='command')
+# Tab 向下选择补全项
+config.bind('<Tab>', 'completion-item-focus next', mode='command')
+
+# ----- prompt 模式 -----
+# Escape / Ctrl-j 退出到 normal 模式
+config.bind('<Escape>', 'mode-leave', mode='prompt')
+config.bind('<Ctrl-j>', 'mode-leave', mode='prompt')
 
 # ===== 命令别名 =====
 c.aliases['bc'] = 'tab-close'
